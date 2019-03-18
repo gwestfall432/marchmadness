@@ -1,0 +1,284 @@
+---
+title: "March Madness Standings"
+subtitle: "Through games on 3/21"
+output: html_notebook
+---
+
+```{r include=FALSE}
+library(readr)
+MarchMadnessData <- read_csv("MarchMadnessData.csv")
+
+library(mdsr)
+MarchMadnessData <-
+  MarchMadnessData %>%
+  mutate(totalPts = 0)
+
+for(i in 1:nrow(MarchMadnessData)){
+  if(MarchMadnessData$Round1.1[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.2[i] == 8){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.3[i] == 5){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.4[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.5[i] == 6){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.6[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.7[i] == 7){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.8[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.9[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.10[i] == 8){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.11[i] == 5){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.12[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.13[i] == 6){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.14[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.15[i] == 7){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.16[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.17[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.18[i] == 8){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.19[i] == 5){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.20[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.21[i] == 6){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.22[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.23[i] == 7){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.24[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.25[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.26[i] == 8){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.27[i] == 5){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.28[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.29[i] == 6){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.30[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+
+  if(MarchMadnessData$Round1.31[i] == 7){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round1.32[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 2
+  }
+  
+  if(MarchMadnessData$Round2.1[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.2[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+
+  if(MarchMadnessData$Round2.3[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.4[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.5[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.6[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+
+  if(MarchMadnessData$Round2.7[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.8[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.9[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.10[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+
+  if(MarchMadnessData$Round2.11[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.12[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.13[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.14[i] == 4){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+
+  if(MarchMadnessData$Round2.15[i] == 3){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Round2.16[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 5
+  }
+  
+  if(MarchMadnessData$Sweet16.1[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+  
+  if(MarchMadnessData$Sweet16.2[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+
+  if(MarchMadnessData$Sweet16.3[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+  
+  if(MarchMadnessData$Sweet16.4[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+  
+  if(MarchMadnessData$Sweet16.5[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+  
+  if(MarchMadnessData$Sweet16.6[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+
+  if(MarchMadnessData$Sweet16.7[i] == 1){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+  
+  if(MarchMadnessData$Sweet16.8[i] == 2){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 10
+  }
+  
+  if(MarchMadnessData$Elite8.1[i] == "Duke"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 15
+  }
+  
+  if(MarchMadnessData$Elite8.2[i] == "Gonzaga"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 15
+  }
+
+  if(MarchMadnessData$Elite8.3[i] == "Virginia"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 15
+  }
+  
+  if(MarchMadnessData$Elite8.4[i] == "North Carolina"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 15
+  }
+  
+  if(MarchMadnessData$Final4.1[i] == "Duke"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 20
+  }
+  
+  if(MarchMadnessData$Final4.2[i] == "Virginia"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 20
+  }
+
+  if(MarchMadnessData$Champion[i] == "Duke"){
+      MarchMadnessData$totalPts[i] = MarchMadnessData$totalPts[i] + 25
+  }
+}
+
+MarchMadnessStandings <-
+  MarchMadnessData %>%
+  mutate(`Final Four` = paste(Elite8.1, Elite8.2, Elite8.3, Elite8.4, sep = ", ")) %>%
+  rename(Points = totalPts) %>%
+  select(Name, `Final Four`, Champion, Points) %>%
+  arrange(-Points)
+
+```
+
+```{r}
+MarchMadnessStandings
+
+```
+
+
